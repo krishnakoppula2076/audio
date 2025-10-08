@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Diarization + TTS (Option A)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: "Inter", Arial, sans-serif; background:#f4f7fb; padding:24px; }
+    .card { background:white; padding:18px; border-radius:10px; max-width:900px; margin:12px auto; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+    h1 { margin-top:0; }
+    label { display:block; margin-top:10px; font-weight:600; }
+    input[type="text"], select, input[type="file"] { width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #ddd; }
+    button { margin-top:12px; padding:10px 14px; border-radius:8px; border:none; background:#2563eb; color:white; cursor:pointer; }
+    .muted { color:#666; font-size:13px; }
+    .section { margin-top:18px; }
+    .downloads a { display:block; margin-top:8px; color:#2563eb; text-decoration:none; }
+    audio { width:100%; margin-top:10px; }
+    .row { display:flex; gap:12px; }
+    .col { flex:1; }
+    pre { background:#f7fafc; padding:12px; border-radius:8px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Diarization → Per-caption mix → Azure TTS</h1>
+    <p class="muted">Upload audio, choose voices (or choose <strong>None (keep original)</strong>) and produce speaker WAVs + combined SRT.</p>
+
+    <div class="section">
+      <h3>Step 1 — Upload & Diarize (Deepgram)</h3>
+      <label>Deepgram API Key</label>
+      <input id="apiKey" type="text" placeholder="Enter Deepgram API key (kept only client-side)">
+
+      <label>Audio file</label>
+      <input id="audioFile" type="file" accept="audio/*">
+
+      <button id="uploadBtn">Upload & Process</button>
+
+      <div id="uploadStatus" class="muted" style="margin-top:10px;"></div>
+      <div id="filesList" style="margin-top:10px;"></div>
+    </div>
+
+    <div id="voiceSection" class="section" style="display:none;">
+      <h3>Step 2 — Choose names & voices</h3>
+      <div class="row">
+        <div class="col">
+          <label>Speaker 0 Name</label>
+          <input id="speaker0Name" type="text" value="Speaker 0">
+
+          <label>Speaker 0 Voice</label>
+          <select id="speaker0Voice">
+            <option value="">None (keep original)</option>
+            <option value="en-US-JennyNeural">Jenny (en-US)</option>
+            <option value="en-US-GuyNeural">Guy (en-US)</option>
+            <option value="en-GB-RyanNeural">Ryan (en-GB)</option>
+            <option value="en-IN-NeerjaNeural">Neerja (en-IN)</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <label>Speaker 1 Name</label>
+          <input id="speaker1Name" type="text" value="Speaker 1">
+
+          <label>Speaker 1 Voice</label>
+          <select id="speaker1Voice">
+            <option value="">None (keep original)</option>
+            <option value="en-US-JennyNeural">Jenny (en-US)</option>
+            <option value="en-US-GuyNeural">Guy (en-US)</option>
+            <option value="en-GB-RyanNeural">Ryan (en-GB)</option>
+            <option value="en-IN-NeerjaNeural">Neerja (en-IN)</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateBtn">Generate TTS & Mix</button>
+      <div id="generateStatus" class="muted" style="margin-top:10px;"></div>
+    </div>
+
+    <div id="results" class="section" style="display:none;">
+      <h3>Result files</h3>
+      <div class="downloads" id="downloads"></div>
+
+      <h4>Preview</h4>
+      <label>Combined (stereo: left = speaker0, right = speaker1)</label>
+      <audio id="previewCombined" controls></audio>
+
+      <label>Speaker 0 (mono)</label>
+      <audio id="preview0" controls></audio>
+
+      <label>Speaker 1 (mono)</label>
+      <audio id="preview1" controls></audio>
+
+      <h4>Generated SRT (preview)</h4>
+      <pre id="srtPreview"></pre>
+    </div>
+  </div>
+
+  <script>
+    let lastXmlFile = null;
+    const uploadBtn = document.getElementById("uploadBtn");
+    const generateBtn = document.getElementById("generateBtn");
+    const apiKeyEl = document.getElementById("apiKey");
+    const audioFileEl = document.getElementById("audioFile");
+    const uploadStatus = document.getElementById("uploadStatus");
+    const filesList = document.getElementById("filesList");
+    const voiceSection = document.getElementById("voiceSection");
+    const resultsDiv = document.getElementById("results");
+    const downloads = document.getElementById("downloads");
+    const previewCombined = document.getElementById("previewCombined");
+    const preview0 = document.getElementById("preview0");
+    const preview1 = document.getElementById("preview1");
+    const srtPreview = document.getElementById("srtPreview");
+    const generateStatus = document.getElementById("generateStatus");
+
+    uploadBtn.addEventListener("click", async () => {
+      uploadStatus.textContent = "";
+      filesList.innerHTML = "";
+      resultsDiv.style.display = "none";
+      voiceSection.style.display = "none";
+      lastXmlFile = null;
+
+      const apiKey = apiKeyEl.value.trim();
+      const file = audioFileEl.files[0];
+      if (!apiKey) return alert("Enter Deepgram API key");
+      if (!file) return alert("Select audio file");
+
+      uploadStatus.textContent = "⏳ Uploading & processing with Deepgram...";
+      const fd = new FormData();
+      fd.append("apiKey", apiKey);
+      fd.append("audioFile", file);
+
+      try {
+        const resp = await fetch("/upload", { method: "POST", body: fd });
+        const data = await resp.json();
+        if (data.error) {
+          uploadStatus.textContent = "❌ " + data.error;
+          return;
+        }
+        uploadStatus.textContent = "✅ Upload complete";
+        const fileLinks = [];
+        (data.files || []).forEach(f => {
+          const a = document.createElement("a");
+          a.href = `/outputs/${f}`;
+          a.target = "_blank";
+          a.textContent = f;
+          fileLinks.push(a);
+          filesList.appendChild(a);
+        });
+        if (data.xmlFile) {
+          lastXmlFile = data.xmlFile;
+          voiceSection.style.display = "block";
+        } else {
+          // sometimes xmlFile might be returned in files list
+          lastXmlFile = data.files && data.files.find(x => x.endsWith(".xml"));
+          if (lastXmlFile) voiceSection.style.display = "block";
+        }
+      } catch (err) {
+        uploadStatus.textContent = "❌ " + err.message;
+        console.error(err);
+      }
+    });
+
+    generateBtn.addEventListener("click", async () => {
+      if (!lastXmlFile) return alert("No captions.xml found. Please run upload first.");
+      generateStatus.textContent = "⏳ Generating TTS and mixing (this may take a while)...";
+      resultsDiv.style.display = "none";
+      downloads.innerHTML = "";
+      srtPreview.textContent = "";
+
+      const payload = {
+        xmlFile: lastXmlFile,
+        speaker0Name: document.getElementById("speaker0Name").value || "Speaker 0",
+        speaker1Name: document.getElementById("speaker1Name").value || "Speaker 1",
+        speaker0Voice: document.getElementById("speaker0Voice").value || "",
+        speaker1Voice: document.getElementById("speaker1Voice").value || ""
+      };
+
+      try {
+        const resp = await fetch("/generate-tts", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await resp.json();
+        if (data.error) {
+          generateStatus.textContent = "❌ " + data.error;
+          return;
+        }
+
+        generateStatus.textContent = "✅ Generation complete";
+        resultsDiv.style.display = "block";
+
+        // show download links
+        (data.files || []).forEach(f => {
+          const a = document.createElement("a");
+          a.href = `/outputs/${f}`;
+          a.textContent = `Download ${f}`;
+          a.target = "_blank";
+          downloads.appendChild(a);
+        });
+
+        // set preview sources (if urls available in response)
+        if (data.urls) {
+          previewCombined.src = data.urls.combined;
+          preview0.src = data.urls.speaker0;
+          preview1.src = data.urls.speaker1;
+          // fetch srt for preview text
+          if (data.urls.srt) {
+            try {
+              const srtResp = await fetch(data.urls.srt);
+              if (srtResp.ok) {
+                const srtText = await srtResp.text();
+                srtPreview.textContent = srtText;
+              }
+            } catch (e) { /* ignore */ }
+          }
+        } else {
+          // fallback: try predictable paths
+          previewCombined.src = `/outputs/combined.wav`;
+          preview0.src = `/outputs/speaker0.wav`;
+          preview1.src = `/outputs/speaker1.wav`;
+          try {
+            const srtResp = await fetch(`/outputs/combined.srt`);
+            if (srtResp.ok) srtPreview.textContent = await srtResp.text();
+          } catch (e) {}
+        }
+
+      } catch (err) {
+        generateStatus.textContent = "❌ " + err.message;
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

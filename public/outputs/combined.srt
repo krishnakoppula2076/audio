@@ -1,0 +1,480 @@
+1
+00:00:02,080 --> 00:00:04,500
+Bot: Hello. Thank you for contacting Herbalife.
+
+2
+00:00:04,960 --> 00:00:07,940
+Bot: Could you please give me your Herbalife distributor ID number?
+
+3
+00:00:08,880 --> 00:00:12,580
+Theju: Hi. It's nine zero two five six seven zero zero.
+
+4
+00:00:21,885 --> 00:00:23,185
+Bot: To verify your identity,
+
+5
+00:00:23,485 --> 00:00:26,065
+Bot: can you please provide your four digit PIN number?
+
+6
+00:00:27,085 --> 00:00:28,625
+Theju: Four five two three.
+
+7
+00:00:36,580 --> 00:00:39,480
+Bot: Hello, Sam Ramirez. How may I help you today?
+
+8
+00:00:40,260 --> 00:00:41,880
+Theju: I would like to place an order.
+
+9
+00:00:48,935 --> 00:00:51,115
+Bot: Is this order going to be placed for US?
+
+10
+00:00:53,175 --> 00:00:53,675
+Theju: Yes.
+
+11
+00:00:54,455 --> 00:00:56,875
+Bot: Could you please confirm the purpose of your order?
+
+12
+00:00:57,440 --> 00:01:00,500
+Bot: Is it for personal consumption or customer direct?
+
+13
+00:01:01,600 --> 00:01:03,460
+Theju: Are there minimum purchase requirements?
+
+14
+00:01:10,005 --> 00:01:13,145
+Bot: There are no minimum purchase requirements to become a distributor.
+
+15
+00:01:14,005 --> 00:01:20,025
+Bot: The only required purchase is the international business pack. Could you please confirm the purpose of your order?
+
+16
+00:01:20,565 --> 00:01:22,105
+Bot: Is it for personal consumption
+
+17
+00:01:22,405 --> 00:01:23,625
+Bot: or customer direct?
+
+18
+00:01:24,880 --> 00:01:27,540
+Theju: Do I need to con give customer receipts?
+
+19
+00:01:33,280 --> 00:01:40,260
+Bot: Yes. You must provide receipts to customers for all retail and nutrition club sales using Herbalife's receiving tools.
+
+20
+00:01:40,695 --> 00:01:43,035
+Bot: Could you please confirm the purpose of your order?
+
+21
+00:01:43,575 --> 00:01:46,555
+Bot: Is it for personal consumption or customer direct?
+
+22
+00:01:46,935 --> 00:01:48,395
+Theju: It's for personal consumption.
+
+23
+00:01:55,160 --> 00:01:57,580
+Bot: You are submitting a personal consumption order
+
+24
+00:01:58,200 --> 00:02:01,900
+Bot: for use by members of your household and paying reduced sales tax.
+
+25
+00:02:02,680 --> 00:02:13,855
+Bot: Before I proceed, do you confirm and understand that products for personal consumption are not intended for resale and will not contribute towards your eligibility to earn and any marketing plan qualifications?
+
+26
+00:02:15,595 --> 00:02:16,095
+Theju: Yes.
+
+27
+00:02:17,435 --> 00:02:19,695
+Bot: Is this a home delivery or pickup order?
+
+28
+00:02:20,715 --> 00:02:22,175
+Theju: It's going to be home delivery.
+
+29
+00:02:30,100 --> 00:02:32,280
+Bot: Are we shipping to an address on file?
+
+30
+00:02:33,780 --> 00:02:36,200
+Theju: How far am I from qualifying to supervisor?
+
+31
+00:02:44,685 --> 00:02:46,225
+Bot: Sure. Let me explain.
+
+32
+00:02:46,765 --> 00:02:50,145
+Bot: To qualify as a supervisor, you can meet one of these conditions.
+
+33
+00:02:50,770 --> 00:02:58,630
+Bot: Earn two thousand documented volume points in a single month or two thousand over two consecutive months with at least one thousand of those unencumbered
+
+34
+00:02:59,250 --> 00:03:02,550
+Bot: or four thousand documented volume points within twelve months.
+
+35
+00:03:03,010 --> 00:03:04,950
+Bot: Let's go ahead and review your account.
+
+36
+00:03:05,985 --> 00:03:13,205
+Bot: You have already reached your qualification within the two month period in April twenty twenty five and May twenty twenty five.
+
+37
+00:03:13,905 --> 00:03:18,085
+Bot: In April, you accumulated three thousand one hundred documented volume points.
+
+38
+00:03:18,600 --> 00:03:21,100
+Bot: Congratulations on your qualification as a supervisor.
+
+39
+00:03:21,640 --> 00:03:23,740
+Bot: Are we shipping to an address on file?
+
+40
+00:03:24,600 --> 00:03:25,820
+Theju: Awesome. Yes.
+
+41
+00:03:34,735 --> 00:03:36,835
+Bot: What is the ZIP code of the shipping address?
+
+42
+00:03:37,615 --> 00:03:39,875
+Theju: It is nine zero five zero two.
+
+43
+00:03:44,680 --> 00:03:50,540
+Bot: We have multiple addresses for this ZIP code. First address is eight fifty three Hamilton Avenue,
+
+44
+00:03:50,840 --> 00:03:51,820
+Bot: Torrance, California
+
+45
+00:03:52,360 --> 00:03:54,220
+Bot: nine zero five zero two.
+
+46
+00:03:54,600 --> 00:03:56,620
+Bot: Second address is nine twenty three
+
+47
+00:03:57,195 --> 00:03:58,975
+Bot: West Carson Street, Torrance, California
+
+48
+00:03:59,675 --> 00:04:01,295
+Bot: nine zero five zero two.
+
+49
+00:04:01,675 --> 00:04:03,535
+Bot: Which address do you want to ship from?
+
+50
+00:04:04,235 --> 00:04:05,855
+Theju: Let's go with Hamilton Avenue.
+
+51
+00:04:13,860 --> 00:04:14,360
+Bot: Great.
+
+52
+00:04:16,180 --> 00:04:23,160
+Bot: How would you like your order shipped? You can go with FedEx Ground three to five days, FedEx one day, or FedEx two days.
+
+53
+00:04:24,535 --> 00:04:26,235
+Theju: I'll go with FedEx one day.
+
+54
+00:04:37,700 --> 00:04:38,920
+Bot: Thank you for your selection.
+
+55
+00:04:39,300 --> 00:04:45,400
+Bot: Please keep in mind, all orders will be shipped the next business day after the order has been processed by the warehouse.
+
+56
+00:04:46,020 --> 00:04:48,600
+Bot: Are you okay with FedEx one day? Yes.
+
+57
+00:04:50,935 --> 00:04:56,155
+Bot: We are now ready to take your order. Please provide the product SKU number and quantity.
+
+58
+00:04:56,535 --> 00:05:00,235
+Bot: If you do not have your SKU number, please say the product name.
+
+59
+00:05:01,575 --> 00:05:06,920
+Theju: I would like a formula one healthy meal nutritional shake mix, French vanilla,
+
+60
+00:05:07,220 --> 00:05:08,680
+Theju: and one tea.
+
+61
+00:05:16,180 --> 00:05:21,605
+Bot: Which flavor tea would you like? We have lemon, raspberry, peach, cinnamon, chai, or sweet ginger.
+
+62
+00:05:23,345 --> 00:05:26,165
+Theju: What's the difference between sweet ginger and chai?
+
+63
+00:05:31,350 --> 00:05:34,810
+Bot: Sweet ginger tea blends spicy ginger with a touch of sweetness,
+
+64
+00:05:35,270 --> 00:05:36,650
+Bot: offering soothing warmth.
+
+65
+00:05:37,270 --> 00:05:42,010
+Bot: Chai tea features a rich mix of traditional spices like cardamom, cinnamon, and cloves,
+
+66
+00:05:42,470 --> 00:05:44,570
+Bot: creating a warm and complex flavor.
+
+67
+00:05:45,275 --> 00:05:47,695
+Bot: Each offers a unique aromatic experience.
+
+68
+00:05:48,795 --> 00:05:49,295
+Bot: Sure.
+
+69
+00:05:49,595 --> 00:05:54,895
+Bot: Which flavor tea would you like? We have lemon, raspberry, peach, cinnamon, chai, or sweet ginger.
+
+70
+00:05:55,915 --> 00:05:57,375
+Theju: Let's go with sweet ginger.
+
+71
+00:05:59,690 --> 00:06:05,870
+Bot: Would you like the one point eight ounce, three point five ounce, or the thirty tea packet size for the sweet ginger tea?
+
+72
+00:06:06,730 --> 00:06:08,910
+Theju: Let's go with one point eight ounce size.
+
+73
+00:06:11,370 --> 00:06:13,790
+Bot: Would you like to include any additional products?
+
+74
+00:06:16,145 --> 00:06:17,765
+Theju: Sure. Add a cell activator.
+
+75
+00:06:25,665 --> 00:06:28,400
+Bot: Sure. I have added formula three cell activator.
+
+76
+00:06:28,700 --> 00:06:37,120
+Bot: By adding this, your total will be increased by thirty five dollars sixty seven cents, and your new total is one hundred and forty eight dollars eighty one cents.
+
+77
+00:06:37,500 --> 00:06:40,480
+Bot: Your volume points are now ninety eight point six three.
+
+78
+00:06:40,865 --> 00:06:42,645
+Bot: Let me repeat back your order.
+
+79
+00:06:43,345 --> 00:06:49,285
+Bot: We have formula one healthy meal nutritional shake mix, French vanilla, herbal tea concentrate,
+
+80
+00:06:49,905 --> 00:06:53,925
+Bot: sweet ginger, one point eight ounce, and formula three cell activator.
+
+81
+00:06:54,800 --> 00:06:57,220
+Bot: Would you like to add anything else to your order?
+
+82
+00:06:58,320 --> 00:07:00,100
+Theju: Make that two cell activators.
+
+83
+00:07:14,865 --> 00:07:19,205
+Bot: Sure. I have updated your order to include two formula three cell activators.
+
+84
+00:07:19,905 --> 00:07:28,810
+Bot: By adding this, your total will be increased by thirty five dollars sixty seven cents, and your new total is one hundred and eighty four dollars forty eight cents.
+
+85
+00:07:29,430 --> 00:07:33,210
+Bot: Your volume points are now one hundred and twenty two point seven eight.
+
+86
+00:07:33,965 --> 00:07:35,665
+Bot: Let me repeat back your order.
+
+87
+00:07:36,045 --> 00:07:41,345
+Bot: We have formula one healthy meal nutritional shake mix, French vanilla, herbal tea concentrate,
+
+88
+00:07:41,885 --> 00:07:45,905
+Bot: sweet ginger one point eight ounce, and two formula three cell activators.
+
+89
+00:07:46,500 --> 00:07:50,200
+Bot: Would you like to add anything else to your order? No. I'm good.
+
+90
+00:07:54,740 --> 00:08:03,735
+Bot: Great. Here are your totals. Your total volume is one hundred and twenty two point seven eight, and your total order price is one hundred and eighty four dollars forty eight cents.
+
+91
+00:08:04,115 --> 00:08:06,775
+Bot: Is there any changes to this order? No.
+
+92
+00:08:09,875 --> 00:08:12,855
+Bot: Once the order is processed, changes are not guaranteed.
+
+93
+00:08:13,470 --> 00:08:15,650
+Bot: Would you like to proceed with the order payment?
+
+94
+00:08:16,510 --> 00:08:17,010
+Theju: Yes.
+
+95
+00:08:26,345 --> 00:08:29,325
+Bot: Which payment method would you like to use for your order today?
+
+96
+00:08:29,865 --> 00:08:31,485
+Bot: Card or pay near me?
+
+97
+00:08:32,345 --> 00:08:33,565
+Theju: Let's go with card.
+
+98
+00:08:40,660 --> 00:08:44,920
+Bot: Are you using your registered credit card, or would you like to pay with a new one?
+
+99
+00:08:46,020 --> 00:08:48,200
+Theju: I will use registered credit card.
+
+100
+00:08:54,035 --> 00:08:56,775
+Bot: Do you want to pay the full amount of the order on this card?
+
+101
+00:08:58,115 --> 00:08:58,615
+Theju: Yes.
+
+102
+00:09:01,235 --> 00:09:04,615
+Bot: Please provide the last four digits of your registered credit card.
+
+103
+00:09:06,035 --> 00:09:07,735
+Theju: It's one two three four.
+
+104
+00:09:15,210 --> 00:09:16,990
+Bot: What is the cardholder's name?
+
+105
+00:09:18,490 --> 00:09:19,870
+Theju: It's Sophie Bennett.
+
+106
+00:09:27,275 --> 00:09:29,375
+Bot: What are the expiration month and year?
+
+107
+00:09:30,555 --> 00:09:31,055
+Theju: September
+
+108
+00:09:31,595 --> 00:09:33,135
+Theju: twenty twenty nine.
+
+109
+00:09:39,370 --> 00:09:43,070
+Bot: Please enter your CVV using the keypad, or you may say it.
+
+110
+00:09:55,395 --> 00:09:58,295
+Bot: Thank you. You have successfully paid for your order.
+
+111
+00:09:59,235 --> 00:10:00,695
+Bot: Your order has been submitted.
+
+112
+00:10:01,190 --> 00:10:05,530
+Bot: Your order number is thirty nine f five four six three eight two three five.
+
+113
+00:10:06,310 --> 00:10:07,130
+Bot: Thank you.
+
+114
+00:10:07,590 --> 00:10:09,770
+Bot: Can I assist you with anything else today?
+
+115
+00:10:10,870 --> 00:10:12,410
+Theju: No. I'm good. Thank you.
+
+116
+00:10:13,665 --> 00:10:16,885
+Bot: Could you please rate our interaction on a scale from one to five
+
+117
+00:10:17,185 --> 00:10:20,005
+Bot: with one being very poor and five being excellent?
+
+118
+00:10:21,585 --> 00:10:24,405
+Theju: I'll give you a five. You were awesome. Thanks.
+
+119
+00:10:26,261 --> 00:10:27,961
+Bot: Thank you for reaching out to Herbalife.
+
+120
+00:10:28,421 --> 00:10:30,041
+Bot: Wishing you a wonderful day.
+

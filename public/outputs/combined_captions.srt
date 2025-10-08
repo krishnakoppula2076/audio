@@ -1,0 +1,138 @@
+1
+00:00:00,240 --> 00:00:07,029
+VA: Hello. This is Jenny from CarMax Auto Finance calling you with an important message.
+
+
+2
+00:00:07,029 --> 00:00:09,233
+VA: May I speak with Graham?
+
+
+3
+00:00:09,233 --> 00:00:11,001
+Graeme: That's me.
+
+
+4
+00:00:13,200 --> 00:00:17,689
+VA: For your security, may I confirm your date of birth, please?
+
+
+5
+00:00:18,535 --> 00:00:21,868
+Graeme: July twenty one nineteen fifty eight.
+
+
+6
+00:00:24,615 --> 00:00:28,152
+VA: Great. And your ZIP code?
+
+
+7
+00:00:28,152 --> 00:00:31,703
+Graeme: My ZIP code is seven five zero two five.
+
+
+8
+00:00:34,340 --> 00:00:35,891
+VA: Great.
+
+
+9
+00:00:35,891 --> 00:00:39,156
+VA: I've successfully verified your identity.
+
+
+10
+00:00:39,156 --> 00:00:50,380
+VA: Graham, I see that your account has a past due balance of one thousand seven hundred eighty dollars and seventy cents, originally due on August twenty fifth twenty twenty five.
+
+
+11
+00:00:50,380 --> 00:00:54,217
+VA: You are currently about seventeen days past due.
+
+
+12
+00:00:54,217 --> 00:01:02,435
+VA: Please note, this is an attempt to collect a debt, and any information obtained will be used for debt collection purpose only.
+
+
+13
+00:01:02,435 --> 00:01:05,564
+VA: Would you like to take care of this payment now?
+
+
+14
+00:01:05,564 --> 00:01:10,857
+Graeme: I've fallen behind on my payments, and I'm having trouble making payment on time.
+
+
+15
+00:01:14,280 --> 00:01:15,817
+VA: Okay.
+
+
+16
+00:01:15,817 --> 00:01:20,647
+VA: Could you let me know the future date that works for you to schedule your promise to pay?
+
+
+17
+00:01:20,655 --> 00:01:25,661
+Graeme: Yeah. Can I pay by the twenty fifth of September?
+
+
+18
+00:01:28,255 --> 00:01:30,173
+VA: Great news.
+
+
+19
+00:01:30,173 --> 00:01:35,574
+VA: As a onetime courtesy, I can move your payment to twenty fifth of September.
+
+
+20
+00:01:35,574 --> 00:01:39,152
+VA: Would you like me to go ahead and reschedule this for you?
+
+
+21
+00:01:39,152 --> 00:01:41,289
+Graeme: Yes, please.
+
+
+22
+00:01:44,120 --> 00:01:45,834
+VA: Excellent.
+
+
+23
+00:01:45,834 --> 00:01:48,623
+VA: I've updated your payment schedule.
+
+
+24
+00:01:48,623 --> 00:01:52,460
+VA: Remember, it's important to stick to this new plan.
+
+
+25
+00:01:52,460 --> 00:02:01,820
+VA: If anything comes up, just reach out to us in advance to avoid any issues with late fees. Do you need any further assistance today?
+
+
+26
+00:02:01,820 --> 00:02:06,691
+Graeme: No. That's it. Thanks.
+
+
+27
+00:02:07,020 --> 00:02:10,026
+VA: Thank you for reaching out to CarMax.
+
+
+28
+00:02:10,026 --> 00:02:12,598
+VA: We wish you a wonderful day.
